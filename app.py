@@ -1,7 +1,9 @@
 from flask import Flask, request, jsonify
+from flask_cors import CORS  # Import CORS
 import mysql.connector
 
 app = Flask(__name__)
+CORS(app)  # Enable CORS for all routes
 
 # MySQL Database Configuration
 DB_HOST = '217.21.94.103'
